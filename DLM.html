@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclat Naturel - Cosmétiques Naturels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100%;
+}
+
+        .header {
+    background: linear-gradient(#8e44ad, #6a1b9a);
+    padding: 30px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+        .contenu-du-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+        @keyframes glow {
+            from { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.2); }
+            to { text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.4); }
+        }
+
+        .slogan {
+            color: rgba(255,255,255,0.9);
+            font-style: italic;
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .title {
+            font-size: 36px;
+            background: linear-gradient(135deg, #8e44ad 0%, #6a1b9a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .contenu-des-produits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+            justify-items: center;
+            max-width: 1200px;
+            margin: 0 auto 60px auto;
+        }
+
+        .produit {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            max-width: 320px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .produit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #8e44ad 0%, #6a1b9a 100%);
+        }
+
+        .produit:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+        .produit-img {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .produit img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 3px solid #f0f0f0;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .produit:hover img {
+            transform: scale(1.05);
+        }
+
+        .nom-du-produit {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .description-du-produit {
+            color: #666;
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .description-du-produit strong {
+            color: #8e44ad;
+        }
+
+        .description-du-produit em {
+            color: #6a1b9a;
+            font-style: italic;
+        }
+
+        .prix-du-produit {
+            font-size: 28px;
+            background: linear-gradient(135deg, #8e44ad 0%, #6a1b9a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .acheter {
+    /* Dégradé violet */
+    background: linear-gradient(135deg, #8e44ad 0%, #6a1b9a 100%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+        
+
+.apropos {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+        .apropos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #8e44ad 0%, #6a1b9a 100%);
+        }
+
+.contenu-apropos {
+    color: gray;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.titre {
+    font-size: 1.8em;
+    color: purple;
+    margin-bottom: 20px;
+}
+
+        .footer {
+            background:  purple;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 36px;
+            }
+            
+            .title {
+                font-size: 28px;
+            }
+            
+            .contenu-des-produits {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .apropos {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Effet de survol pour les boutons uniquement avec CSS */
+        .acheter:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(142, 68, 173, 0.3);
+        }
+
+        /* Animation au chargement de la page */
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header {
+            animation: slideInFromTop 0.8s ease-out;
+        }
+
+        /* Animation pour la section à propos */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .apropos {
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        /* Effet de pulse pour attirer l'attention */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .prix-du-produit {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+
+        /* Amélioration du contraste pour les textes */
+        .description-du-produit {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="contenu-du-header">
+            <h1 class="logo">Eclat Naturel</h1>
+            <p class="slogan">Révélez votre beauté naturelle</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="title">Notre Collection</h2>
+        
+        <div class="contenu-des-produits">
+            <article class="produit">
+                <div class="produit-img">
+                    <img src="beurredekarité.jpg" alt="Beurre de karité pur pour hydrater la peau">
+                </div>
+                <h3 class="nom-du-produit">Beurre de Karité</h3>
+                <p class="description-du-produit">
+                    <strong>Hydrate intensément et restaure l'éclat naturel</strong> de votre peau grâce au beurre de karité 100% naturel.
+                    <br><br>
+                    Un soin onctueux qui adoucit, régénère et protège toutes les peaux, même les plus sensibles.
+                    <br><br>
+                    <em>Résultat : une peau souple, éclatante et profondément nourrie au quotidien.</em>
+                </p>
+                <div class="prix-du-produit">€25.95</div>
+                <a href="#commander" class="acheter" role="button">Commander</a>
+            </article>
+
+            <article class="produit">
+                <div class="produit-img">
+                    <img src="crèmedecoco.jpg" alt="Crème de coco hydratante naturelle">
+                </div>
+                <h3 class="nom-du-produit">Crème de Coco</h3>
+                <p class="description-du-produit">
+                    <strong>Hydrate, apaise et illumine naturellement</strong> votre peau grâce à l'huile de coco pure et nourrissante.
+                    <br><br>
+                    Une texture légère et fondante qui pénètre rapidement pour adoucir, rafraîchir et revitaliser tous les types de peaux, même les plus sèches.
+                    <br><br>
+                    <em>Résultat : une peau douce, éclatante et délicatement parfumée à la noix de coco.</em>
+                </p>
+                <div class="prix-du-produit">€23.54</div>
+                <a href="#commander" class="acheter" role="button">Commander</a>
+            </article>
+
+            <article class="produit">
+                <div class="produit-img">
+                    <img src="huileavocat.jpg" alt="Huile d'avocat réparatrice pour la peau">
+                </div>
+                <h3 class="nom-du-produit">Huile d'Avocat</h3>
+                <p class="description-du-produit">
+                    <strong>Répare, nourrit et protège intensément</strong> votre peau grâce aux bienfaits de l'huile d'avocat riche en vitamines.
+                    <br><br>
+                    Une texture soyeuse qui pénètre rapidement, aide à régénérer les tissus cutanés et apaise les peaux sèches, tiraillées ou abîmées.
+                    <br><br>
+                    <em>Résultat : une peau revitalisée, souple et profondément régénérée jour après jour.</em>
+                </p>
+                <div class="prix-du-produit">€19.54</div>
+                <a href="#commander" class="acheter" role="button">Commander</a>
+            </article>
+
+            <article class="produit">
+                <div class="produit-img">
+                    <img src="serumaloe.jpg" alt="Sérum à l'aloe vera apaisant">
+                </div>
+                <h3 class="nom-du-produit">Sérum à l'Aloe Vera</h3>
+                <p class="description-du-produit">
+                    <strong>Hydrate en profondeur, apaise et répare</strong> la peau grâce à la puissance naturelle de l'aloe vera concentré.
+                    <br><br>
+                    Sa texture légère pénètre instantanément pour calmer les rougeurs, lisser le grain de peau et restaurer le confort cutané, même après une exposition au soleil ou au stress.
+                    <br><br>
+                    <em>Résultat : une peau fraîche, lumineuse et visiblement apaisée dès les premières applications.</em>
+                </p>
+                <div class="prix-du-produit">€16.40</div>
+                <a href="#commander" class="acheter" role="button">Commander</a>
+            </article>
+
+<article class="produit">
+    <div class="produit-img">
+        <img src="savonnoir.jpg" alt="Sérum du soir nourrissant et réparateur">
+    </div>
+    <h3 class="nom-du-produit">Savan Soir</h3>
+    <p class="description-du-produit">
+        <strong>Soin du soir nourrissant et régénérant</strong> formulé pour apaiser, hydrater et revitaliser votre peau pendant la nuit.
+        <br><br>
+        Riche en huiles naturelles et extraits botaniques, sa texture légère pénètre rapidement et favorise la régénération cellulaire.
+        <br><br>
+        <em>Résultat : une peau douce, reposée et éclatante au réveil.</em>
+    </p>
+    <div class="prix-du-produit">€19</div>
+    <a href="#commander" class="acheter" role="button">Commander</a>
+</article>
+
+
+<article class="produit">
+    <div class="produit-img">
+        <img src="huilelin.jpg" alt="Huile de lin nourrissante pour le corps">
+    </div>
+    <h3 class="nom-du-produit">Huile de Lin</h3>
+    <p class="description-du-produit">
+        <strong>Nourrit, assouplit et protège</strong> la peau grâce à sa teneur naturelle en oméga-3 et en vitamines.
+        <br><br>
+        Parfaite pour les peaux sèches ou sensibles, elle aide à apaiser les irritations, améliorer l’élasticité cutanée et prévenir la déshydratation.
+        <br><br>
+        <em>Résultat : une peau douce, lisse et confortablement hydratée jour après jour.</em>
+    </p>
+    <div class="prix-du-produit">€17.80</div>
+    <a href="#commander" class="acheter" role="button">Commander</a>
+</article>
+
+
+
+        </div>
+
+        <section class="apropos">
+            <h3 class="titre">Pourquoi choisir Eclat Naturel ?</h3>
+            <p class="contenu-apropos">
+                Nos produits sont formulés avec des ingrédients naturels de la plus haute qualité. 
+                Chaque produit est testé dermatologiquement et respecte votre peau ainsi que l'environnement. 
+                Découvrez une routine beauté authentique qui révèle votre éclat naturel.
+            </p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Eclat Naturel</p>
+        <p>Cosmétiques naturels et bio pour votre beauté</p>
+        <p>Contact : info@eclat-naturel.fr | 07 20 46 67 09</p>
+    </footer>
+</body>
+</html>

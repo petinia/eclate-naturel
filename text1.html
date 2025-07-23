@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclat naturel- Cosmétiques</title>
+    <style>
+
+      body {
+    margin: 0;
+    padding: 0;
+    background: lightgray;
+}
+
+        .header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
+
+ .contenu-du-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+
+
+        .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: purple;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    color: gray;
+    font-style: italic;
+}
+
+ .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+ .title {
+    font-size: 30px;        
+    color: purple;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contenu-des-produits {
+    margin-bottom: 40px;
+}
+
+.produit {
+    width: 300px;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+ .produit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .produit:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+.produit-img {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .produit:hover img {
+            transform: scale(1.05);
+        }
+
+
+
+
+
+.produit img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.nom-du-produit {
+    font-size: 20px;
+    color: purple;
+    margin-bottom: 10px;
+}
+
+.description-du-produit {
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.prix-du-produit {
+    font-size: 22px;
+    color: purple;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.acheter {
+    background: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.apropos {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.contenu-apropos {
+    color: gray;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.titre {
+    font-size: 1.8em;
+    color: purple;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background: purple;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+<div  class="contenu-du-header">
+    <h1 class="logo"> Eclat naturel </h1>
+<p class="slogan"> Révélez votre breaté naturelle</p>
+</div>
+    </header>
+    <div class="container">
+        <h2 class="title"> notre colletion </h2>
+ <div class="contenu-des-produits">
+<div class="produit">
+
+ <div class="produit-img">
+
+     <img src="beurredekarité.jpg" alt="beurre de karité">
+</div>
+<h3 class="nom-du-produit"> Beurre de karité</h3>
+  <p class="description-du-produit">
+    <strong> Hydrate intensément et restaure l'éclat naturel</strong> de votre peau grâce au beure de karité 100% naturel.
+    <br><br>
+    un soin oncueux qui adoucit, régènère et protège toutes les peaux, même les plus sensibles.
+    <br><br>
+    <em>Résultat : une peau souple, éclatante et profondément nourrie au quotidien.</em>
+  </p>
+  <div class="prix-du-produit">€25.95</div>
+  <button class="acheter"> Commander</button>
+</div>
+
+<div class="produit">
+<div class="produit-img">
+     <img src="crèmedecoco.jpg" alt="crème de coco">
+</div>
+<h3 class="nom-du-produit"> Crème de coco</h3>
+ <p class="description-du-produit">
+  <strong>Hydrate, apaise et illumine naturellement</strong> votre peau grâce à l’huile de coco pure et nourrissante.
+  <br><br>
+  Une texture légère et fondante qui pénètre rapidement pour adoucir, rafraîchir et revitaliser tous les types de peaux, même les plus sèches.
+  <br><br>
+  <em>Résultat : une peau douce, éclatante et délicatement parfumée à la noix de coco.</em>
+</p>
+  <div class="prix-du-produit">€23.54</div>
+  <button class="acheter"> Commander</button>
+</div>
+
+<div class="produit">
+<div class="produit-img">
+     <img src="huiledavocat.jpg" alt="L'huile d'avocat">
+</div>
+<h3 class="nom-du-produit"> L'huile d'avocat</h3>
+ <p class="description-du-produit">
+  <strong>Répare, nourrit et protège intensément</strong> votre peau grâce aux bienfaits de l’huile d’avocat riche en vitamines.
+  <br><br>
+  Une texture soyeuse qui pénètre rapidement, aide à régénérer les tissus cutanés et apaise les peaux sèches, tiraillées ou abîmées.
+  <br><br>
+  <em>Résultat : une peau revitalisée, souple et profondément régénérée jour après jour.</em>
+</p>
+
+  <div class="prix-du-produit">€19.54</div>
+  <button class="acheter"> Commander</button>
+</div>
+
+<div class="produit">
+<div class="produit-img">
+  
+    <img src="serumaloe.jpg" alt="Sérum à l’aloe vera">
+  </div>
+  <h3 class="nom-du-produit">Sérum à l’aloe vera</h3>
+  <p class="description-du-produit">
+    <strong>Hydrate en profondeur, apaise et répare</strong> la peau grâce à la puissance naturelle de l’aloe vera concentré.
+    <br><br>
+    Sa texture légère pénètre instantanément pour calmer les rougeurs, lisser le grain de peau et restaurer le confort cutané, même après une exposition au soleil ou au stress.
+    <br><br>
+    <em>Résultat : une peau fraîche, lumineuse et visiblement apaisée dès les premières applications.</em>
+  </p>
+
+  <div class="prix-du-produit">€16.4</div>
+  <button class="acheter"> Commander</button>
+</div>
+
+
+<div class="apropos">
+    <h3 class="titre"> Pourquoi choisir Eclat naturel ?</h3>
+<p class="contenu-apropos"> Nos produits sont formulés avec des ingrédients naturels de la plus haute qualité. 
+                Chaque produit est testé dermatologiquement et respecte votre peau ainsi que l'environnement. 
+                Découvrez une routine beauté authentique qui révèle votre éclat naturel.
+</p>
+</div>
+</div>
+<footer class="footer">
+    <p>&copy; 2025 Eclat naturel.</p>
+    <p>Cosmétiques naturels et bio pour votre beauté.</p>
+    <p>Contact : info@eclat-naturel.fr | 01 23 45 67 89</p>
+
+  </footer>
+
+</body>
+</html>
